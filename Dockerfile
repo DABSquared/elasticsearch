@@ -1,4 +1,4 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch
+FROM docker.elastic.co/elasticsearch/elasticsearch:5.2.2
 
 LABEL maintainer "dbrooks@dabsquared.com"
 
