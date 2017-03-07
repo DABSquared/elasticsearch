@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eo pipefail
 
-host="$(hostname --ip-address || echo '127.0.0.1')"
+host="$(hostname --ip-address || echo 'localhost')"
 
 if health="$(curl -fsSL "http://$host:9200/_cat/health?h=status")"; then
 	health="$(echo "$health" | sed -r 's/^[[:space:]]+|[[:space:]]+$//g')" # trim whitespace (otherwise we'll have "green ")
